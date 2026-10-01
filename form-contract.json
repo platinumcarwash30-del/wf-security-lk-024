@@ -1,0 +1,19 @@
+{
+  "license_code": "LK-024",
+  "source": "wf-security-website",
+  "status": "prepared_for_synchronized_app_integration",
+  "fields": {
+    "ime": "first_name",
+    "prezime": "last_name",
+    "email": "email",
+    "telefon": "phone",
+    "poruka": "message"
+  },
+  "future_request_defaults": {
+    "status": "new",
+    "assigned_role": "admin",
+    "source_label": "Website form",
+    "license": "LK-024"
+  },
+  "note": "The current static form does not send data yet. The final endpoint and app authentication will be connected together with the LK-024 application."
+}
