@@ -1,4 +1,10 @@
 (() => {
+  // Refresh the inner-page visual layer without changing homepage content.
+  document.querySelectorAll('link[rel="stylesheet"][href*="styles-extra.css"]').forEach((link) => {
+    const base = link.href.split('?')[0];
+    if (!link.href.includes('v=bg3')) link.href = `${base}?v=bg3`;
+  });
+
   const menuButton = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#main-nav');
   if (menuButton && nav) {
