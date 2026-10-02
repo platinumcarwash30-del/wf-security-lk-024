@@ -36,6 +36,18 @@ body:not(.wf-home){
   background-attachment:fixed;
   background-blend-mode:normal,normal,screen;
 }
+body:not(.wf-home)::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:url("assets/platinum-core-777.png") right 8% center/min(520px,46vw) auto no-repeat;
+  opacity:.18;
+  mix-blend-mode:screen;
+}
+body:not(.wf-home)>*{position:relative;z-index:1}
+body:not(.wf-home) .site-header{z-index:20}
 body:not(.wf-home) main{background:transparent}
 body:not(.wf-home) .page-hero,
 body:not(.wf-home) .wf-page-hero{background:transparent}
@@ -77,6 +89,7 @@ body:not(.wf-home) .topline{background:rgba(233,238,244,.9)}
     background-position:center,center,center 22%;
     background-size:cover,cover,min(370px,82vw) auto;
   }
+  body:not(.wf-home)::before{background-position:center 23%;background-size:min(370px,82vw) auto;opacity:.14}
   body:not(.wf-home) .content-page,
   body:not(.wf-home) .wf-inner-light,
   body:not(.wf-home) .wf-service-detail{background:linear-gradient(180deg,rgba(4,18,36,.94),rgba(7,26,51,.88))}
